@@ -11,5 +11,9 @@ export default defineNuxtConfig({
     ],
   },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
-  modules: ["@nuxtjs/tailwindcss", "vue-svg-inline-loader/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "vue-svg-inline-loader/nuxt",
+    "@vueuse/nuxt",
+  ],
 });

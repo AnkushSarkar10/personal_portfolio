@@ -1,13 +1,24 @@
 <script setup lang='ts'>
+// navbar styling logic stuff
+type nav = "home" | "about" | "work" | "contact";
+const curNav = ref<nav>("home");
+
+const changeNav = (navName:nav) => {
+    curNav.value = navName;
+    // console.log(curNav.value);
+}
+
 </script>
 
 <template>
     <div>
-        <nav-bar></nav-bar>
+        <nav-bar :curNav="curNav"></nav-bar>
         <theme-togle></theme-togle>
-         <!-- pages -->
-        <landing-page></landing-page>
-        <about-page></about-page>
+        <!-- pages -->
+        <landing-page @change-nav="changeNav" ref="home" id="home"></landing-page>
+        <about-page @change-nav="changeNav" id="about" />
+        <work-page @change-nav="changeNav" ref="work" id="work"></work-page>
+        <contact-page @change-nav="changeNav" ref="contact" id="contact"></contact-page>
     </div>
 </template>
 

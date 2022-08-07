@@ -18,7 +18,7 @@ const changeTheme = () => {
 </script>
 
 <template>
-    <input type="checkbox" class="toggle absolute top-5 right-5" @click="changeTheme"/>
+    <input type="checkbox" class="toggle absolute top-11 right-[100px]" @click="changeTheme"/>
 </template>
 
 <style scoped>
