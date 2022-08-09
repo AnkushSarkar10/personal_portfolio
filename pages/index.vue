@@ -5,13 +5,16 @@ const curNav = ref<nav>("home");
 
 const changeNav = (navName:nav) => {
     curNav.value = navName;
-    // console.log(curNav.value);
 }
+
+onMounted(() => {
+    window.scrollTo(0, 0);
+})
 
 </script>
 
 <template>
-    <div>
+    <div class="text-base-content">
         <nav-bar :curNav="curNav"></nav-bar>
         <theme-togle></theme-togle>
         <!-- pages -->

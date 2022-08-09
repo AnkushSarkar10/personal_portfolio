@@ -15,5 +15,5 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "vue-svg-inline-loader/nuxt",
     "@vueuse/nuxt",
-  ],
+  ]
 });
