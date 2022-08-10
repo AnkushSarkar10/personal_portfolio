@@ -18,14 +18,14 @@ onMounted(() => {
 <template>
     <div class="flex flex-col min-h-screen ml-40 mr-16 mb-14 pl-5 pt-9">
 
-        <h1 ref="page" class="text-5xl font-bold">About</h1>
-        <div class="w-32 left-12 h-4 bg-primary-focus relative bottom-4 opacity-80 -z-50"/>
+        <h1 ref="page" class="text-5xl font-bold font-Source tracking-wider">About</h1>
+        <div class="w-32 left-[2.8rem] h-4 bg-secondary relative bottom-4 opacity-80 -z-50"/>
 
         <div class="flex flex-row mt-16">
             <div class="w-1/2 pr-14 text-center items-center flex flex-col">
                 <img src="~/public/img/qutubminar.png" alt="img"
-                    class="object-cover object-top mb-7 h-[17rem] w-[17rem] rounded-full">
-                <div class="text-2xl font-bold italic mb-7 ">Who is this guy?</div>
+                    class="object-cover object-top mb-7 h-[17rem] w-[17rem] rounded-full border-[4px] border-primary-focus shadow-sm">
+                <div class="text-2xl font-Source tracking-wide font-bold mb-7 ">Who is this guy?</div>
                 <div class="text-xl font-light">
                     Hi, I am Ankush Sarkar. I am a second-year student studying Computer Science at Mcmaster University. I can build full-stack
                     web
@@ -57,17 +57,4 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.hexagon {
-    top: 30vh;
-    left: 40%;
-    position: absolute;
-    margin: 0 auto;
-    background-color: dodgerblue;
-    border-radius: 10px;
-    width: 100px;
-    height: 63px;
-    box-sizing: border-box;
-    transition: all 1s;
-    border: 0.4vh solid transparent;
-}
 </style>

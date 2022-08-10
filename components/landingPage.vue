@@ -15,23 +15,27 @@ onMounted(() => {
 
 const gotoContact = () => {
     const element = document.getElementById('contact');
-    element.scrollIntoView({behavior : "smooth"});
+    element.scrollIntoView({ behavior: "smooth" });
 }
 </script>
 
 <template>
     <div>
-        <div class="flex flex-col justify-center min-h-screen ml-40 mr-16 pl-5">
+        <div class="flex flex-col space-y-4 pt-[26vh] min-h-screen ml-40 mr-16 pl-5">
             <h1 ref="page" class="absolute top-14 text-base-100 text-xs select-none">.</h1>
-            <h1 class="text-5xl md:text-6xl -translate-y-20">Hello, I'm <span
-                    class="text-primary font-bold">Ankush</span>,</h1>
-            <h1 class="text-4xl md:text-5xl font-light -translate-y-16">an aspiring web developer <span
+            <h1 class="text-lg md:text-xl font-light font-Source">Hi, my name is</h1>
+            <span class="text-secondary font-bold text-5xl md:text-6xl">Ankush Sarkar.</span>
+            <h1 class="text-2xl md:text-3xl font-normal font-Source">I am an aspiring web developer.<span
                     class="text-xs italic"></span>
 
             </h1>
-            <button @click="gotoContact" class="btn btn-outline btn-lg hover:btn-secondary self-start relative top-14">Contact Me<font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4"/></button>
+            <button @click="gotoContact"
+                class="font-Source tracking-widest btn btn-outline btn-primary btn-lg hover:btn-accent self-start relative top-24">Contact Me
+                <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4" />
+            </button>
         </div>
-        <div class="absolute top-[14rem] right-28 flex flex-col text-lg md:text-3xl space-y-12">
+        <!-- right side icons -->
+        <div class="absolute top-[15rem] right-28 flex flex-col text-lg md:text-3xl space-y-12">
             <a href="https://github.com/AnkushSarkar10" target="_blank">
                 <font-awesome-icon icon="fa-brands fa-github" />
             </a>
@@ -50,6 +54,9 @@ const gotoContact = () => {
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
 .arrow {
     transform: scaleY(1.2) scaleX(0.9);
 }

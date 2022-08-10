@@ -14,7 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="text-base-content">
+    <div class="text-base-content scroll-smooth">
         <nav-bar :curNav="curNav"></nav-bar>
         <theme-togle></theme-togle>
         <!-- pages -->
@@ -22,6 +22,8 @@ onMounted(() => {
         <about-page @change-nav="changeNav" id="about" />
         <work-page @change-nav="changeNav" ref="work" id="work"></work-page>
         <contact-page @change-nav="changeNav" ref="contact" id="contact"></contact-page>
+
+        <TheFooter/>
     </div>
 </template>
 

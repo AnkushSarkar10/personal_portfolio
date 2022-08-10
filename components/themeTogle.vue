@@ -20,8 +20,8 @@ const changeTheme = () => {
 <template>
 <div class="absolute top-14 right-[5rem]">
     <input type="checkbox" class="toggle toggle-lg z-20" @click="changeTheme" />
-    <font-awesome-icon v-if="curTheme == 'light'" class="relative bottom-[0.6rem] right-[3.6rem] text-lg z-0" icon="fas fa-sun"></font-awesome-icon>
-    <font-awesome-icon v-else class="relative bottom-[0.6rem] right-[1.7rem] text-lg z-0" icon="fas fa-moon"></font-awesome-icon>
+    <font-awesome-icon v-if="curTheme == 'light'" class="relative bottom-[0.6rem] right-[3.6rem] text-lg z-0 pointer-events-none" icon="fas fa-sun"></font-awesome-icon>
+    <font-awesome-icon v-else class="relative bottom-[0.6rem] right-[1.7rem] text-lg z-0 pointer-events-none" icon="fas fa-moon"></font-awesome-icon>
 </div>
     
 
