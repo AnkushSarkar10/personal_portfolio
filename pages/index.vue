@@ -3,7 +3,15 @@
 type nav = "home" | "about" | "work" | "contact";
 const curNav = ref<nav>("home");
 
-const changeNav = (navName:nav) => {
+useHead({
+    title: "hello",
+    meta: [{
+        name: 'viewport',
+        content: "height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    }]
+})
+
+const changeNav = (navName: nav) => {
     curNav.value = navName;
 }
 
@@ -23,7 +31,7 @@ onMounted(() => {
         <work-page @change-nav="changeNav" ref="work" id="work"></work-page>
         <contact-page @change-nav="changeNav" ref="contact" id="contact"></contact-page>
 
-        <TheFooter/>
+        <TheFooter />
     </div>
 </template>
 

@@ -19,9 +19,14 @@ const goToSite = () => {
             <h1 class="text-2xl font-semibold tracking-tight font-Source mb-10 mr-5">{{ projectName }}</h1>
             <h1
                 class="bg-accent text-accent-content shadow-xl font-medium text-md rounded-lg pl-5 pr-10 py-6 border-0 border-primary-focus">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eveniet libero quam sequi, velit soluta,
-                molestias obcaecati ipsa odio dignissimos dolores, voluptatibus fuga ex sit. Tempora iure voluptatum
-                tempore molestias.</h1>
+                A 3D audio visualzer built using , <a href="https://threejs.org/"
+                    target="_blank" class="text-primary underline hover:text-primary-focus">Three js</a> , <a
+                    href="https://v3.nuxtjs.org/" target="_blank"
+                    class="text-primary underline hover:text-primary-focus">Nuxt js</a> and <a
+                    href="https://tailwindcss.com/" target="_blank"
+                    class="text-primary underline hover:text-primary-focus">tailwind css</a> . The app is hosted on <a
+                    href="https://www.netlify.com/" target="_blank"
+                    class="text-primary underline hover:text-primary-focus">Netlify</a>.</h1>
             <div class="flex justify-end space-x-6 text-2xl mt-5 mr-4">
                 <a :href="githubLink" target="_blank">
                     <font-awesome-icon icon="fa-brands fa-github" />

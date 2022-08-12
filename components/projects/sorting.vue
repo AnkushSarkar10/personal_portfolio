@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 const fileName: string = 'sortingalgovis';
-const githubLink:string = 'https://github.com/AnkushSarkar10/sort-algo-vis';
-const siteLink:string = 'https://sorting-algo-visualiser.netlify.app/';
+const githubLink: string = 'https://github.com/AnkushSarkar10/sort-algo-vis';
+const siteLink: string = 'https://sorting-algo-visualiser.netlify.app/';
 const goToSite = () => {
     window.open(siteLink, '_blank');
 }
@@ -16,10 +16,17 @@ const goToSite = () => {
         <div class="description place-self-center text-end z-10">
             <h1 class="text-2xl font-semibold tracking-tight font-Source mr-5">Sorting Algorithm</h1>
             <h1 class="text-2xl font-semibold tracking-tight font-Source mb-6 mr-5">Visualizer</h1>
-            <h1 class="bg-accent text-accent-content shadow-xl font-medium text-md rounded-lg pl-5 pr-10 py-6 border-0 border-primary-focus">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eveniet libero quam sequi, velit soluta,
-                molestias obcaecati ipsa odio dignissimos dolores, voluptatibus fuga ex sit. Tempora iure voluptatum
-                tempore molestias.</h1>
+            <h1
+                class="bg-accent text-accent-content shadow-xl font-medium text-md rounded-lg pl-5 pr-10 py-6 border-0 border-primary-focus">
+                A web app for visualizing various sorting algorithms. Built using <a
+                    href="https://v3.nuxtjs.org/" target="_blank"
+                    class="text-primary underline hover:text-primary-focus">Nuxt js</a>, <a
+                    href="https://tailwindcss.com/" target="_blank"
+                    class="text-primary underline hover:text-primary-focus">tailwind css</a>, <a
+                    href="https://daisyui.com//" target="_blank"
+                    class="text-primary underline hover:text-primary-focus">daisyui</a>. The app is hosted on <a
+                    href="https://www.netlify.com/" target="_blank"
+                    class="text-primary underline hover:text-primary-focus">Netlify</a>.</h1>
             <div class="flex justify-end space-x-6 text-2xl mt-4 mr-4">
                 <a :href="githubLink" target="_blank">
                     <font-awesome-icon icon="fa-brands fa-github" />

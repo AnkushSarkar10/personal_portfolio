@@ -11,7 +11,7 @@ const scrollToElm = (id: string) => {
 </script>
 
 <template>
-    <div class="fixed top-0 left-0 h-screen w-24 flex flex-col shadow-2xl text-2xl pt-36 bg-base-200">
+    <div class="fixed top-0 bottom-auto left-0 min-h-screen w-12 md:w-20 flex flex-col shadow-2xl text-lg md:text-2xl pt-36 bg-base-200">
         <h1 @click="scrollToElm('home')"
             :class="{ 'underline underline-offset-[5px] decoration-primary-focus': (props.curNav == 'home') }"
             class="-rotate-90 mb-24 hover:text-secondary-focus hover:cursor-pointer">Home</h1>
