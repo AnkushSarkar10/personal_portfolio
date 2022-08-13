@@ -6,15 +6,27 @@ const siteLink: string = 'https://vue-flask-tic-tac-toe.web.app/';
 const goToSite = () => {
     window.open(siteLink, '_blank');
 }
+const image = ref(null);
+const imgH = ref(0);
+
+onMounted(() => {
+    imgH.value = image.value.clientHeight;
+    window.addEventListener("resize", () => {
+        console.log(image.value.clientHeight);
+        imgH.value = image.value.clientHeight;
+    })
+})
 </script>
 
 <template>
     <div class="grid-template-area">
 
         <div class="description place-self-center text-start z-10">
-            <h1 class="text-2xl font-semibold tracking-tight font-Source mb-10 ml-5">{{ projectName }}</h1>
+            <h1 id="title" class="text-base md:text-2xl font-semibold tracking-tight font-Source mb-10 ml-5">{{
+                    projectName
+            }}</h1>
             <h1
-                class="bg-accent text-accent-content shadow-xl font-medium text-md rounded-lg pl-7 pr-9 py-6 border-0 border-primary-focus">
+                class="bg-accent text-accent-content shadow-xl font-medium text-xs md:text-base rounded-lg pl-7 pr-9 py-6 border-0 border-primary-focus">
                 An online multiplayer Tic Tac Toe, built using <a href="https://vuejs.org/" target="_blank"
                     class="text-primary underline hover:text-primary-focus">vue js</a> and <a
                     href="https://flask-socketio.readthedocs.io/en/latest/" target="_blank"
@@ -24,7 +36,7 @@ const goToSite = () => {
                     class="text-primary underline hover:text-primary-focus">firebase</a>, and the flask backend is
                 hosted on <a href="https://www.heroku.com/free" target="_blank"
                     class="text-primary underline hover:text-primary-focus">heroku</a>.</h1>
-            <div class="flex justify-start space-x-6 text-2xl mt-5 ml-4">
+            <div class="flex justify-start space-x-6 text-lg md:text-2xl mt-5 ml-4">
                 <a :href="githubLink" target="_blank">
                     <font-awesome-icon icon="fa-brands fa-github" />
                 </a>
@@ -35,13 +47,19 @@ const goToSite = () => {
 
         </div>
 
-        <img :src="`/_nuxt/public/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
-        <div class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer" @click="goToSite"></div>
+        <img ref="image" :src="`/_nuxt/public/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
+        <div :style="{
+            'max-height': `${imgH}px`
+        }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer" @click="goToSite"></div>
 
     </div>
 </template>
 
 <style scoped>
+#title {
+    text-shadow: 1px 0px black;
+}
+
 .grid-template-area {
     display: grid;
     grid-template-areas: "text image image image image image image image";
@@ -50,21 +68,24 @@ const goToSite = () => {
 
 .img {
     grid-area: image;
-    grid-column: 4 / -1;
+    grid-column: 3 / -1;
 }
 
 .description {
-    grid-column: 1 / 5;
+    grid-column: 1 / 7;
 }
 
-/* .img {
-    grid-area: image;
-    grid-column: 1 / 6;
-}
 
-.description {
-    grid-column: 5 / -1;
-} */
+@media (min-width: 768px) {
+    .img {
+        grid-area: image;
+        grid-column: 4 / -1;
+    }
+
+    .description {
+        grid-column: 1 / 5;
+    }
+}
 
 .img,
 .description {

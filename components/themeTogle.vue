@@ -18,7 +18,7 @@ const changeTheme = () => {
 </script>
 
 <template>
-<div class="absolute top-14 right-[5rem] text-base-content">
+<div class="absolute scale-75 md:scale-100 top-[2rem] md:top-14 right-[0rem] md:right-[5rem] text-base-content">
     <input type="checkbox" class="toggle toggle-lg z-20" @click="changeTheme" />
     <font-awesome-icon v-if="curTheme == 'light'" class="relative bottom-[0.6rem] right-[3.6rem] text-lg z-0 pointer-events-none" icon="fas fa-sun"></font-awesome-icon>
     <font-awesome-icon v-else class="relative bottom-[0.6rem] right-[1.7rem] text-lg z-0 pointer-events-none" icon="fas fa-moon"></font-awesome-icon>

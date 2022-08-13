@@ -21,21 +21,21 @@ const gotoContact = () => {
 
 <template>
     <div>
-        <div class="flex flex-col space-y-4 pt-[26vh] min-h-screen ml-40 mr-16 pl-5">
+        <div class="flex flex-col space-y-4 pt-[27vh] md:pt-[26vh] min-h-screen ml-14 md:ml-40 md:mr-16 pl-5">
             <h1 ref="page" class="absolute top-14 text-base-100 text-xs select-none">.</h1>
-            <h1 class="text-lg md:text-xl font-light font-Source">Hi, my name is</h1>
-            <span class="text-secondary font-bold text-5xl md:text-6xl">Ankush Sarkar.</span>
-            <h1 class="text-2xl md:text-3xl font-normal font-Source">I am an aspiring web developer.<span
+            <h1 class="text-base md:text-xl font-light font-Source">Hi, my name is</h1>
+            <span class="text-secondary font-bold text-3xl md:text-6xl">Ankush Sarkar.</span>
+            <h1 class="text-xl md:text-3xl font-normal font-Source">I am an aspiring web developer.<span
                     class="text-xs italic"></span>
 
             </h1>
             <button @click="gotoContact"
-                class="font-Source tracking-widest btn btn-outline btn-primary btn-lg hover:btn-accent self-start relative top-24">Contact Me
+                class="font-Source tracking-widest btn btn-outline btn-primary md:btn-lg hover:btn-accent self-start relative top-24">Contact Me
                 <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4" />
             </button>
         </div>
         <!-- right side icons -->
-        <div class="absolute top-[15rem] right-28 flex flex-col text-lg md:text-3xl space-y-12">
+        <div class="invisible md:visible absolute top-[15rem] right-28 flex flex-col text-lg md:text-3xl space-y-12">
             <a href="https://github.com/AnkushSarkar10" target="_blank">
                 <font-awesome-icon icon="fa-brands fa-github" />
             </a>
