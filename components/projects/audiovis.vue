@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import anime from 'animejs/lib/anime.es.js';
+
 const fileName: string = 'audio_vis';
 const projectName: string = 'Audio Visualizer';
 const githubLink: string = 'https://github.com/AnkushSarkar10/audio_vis_threejs';
@@ -8,26 +10,40 @@ const goToSite = () => {
 }
 
 const image = ref(null);
+const project = ref(null);
+const isVisible = useElementVisibility(project);
 const imgH = ref(0);
 
 onMounted(() => {
     imgH.value = image.value.clientHeight;
     window.addEventListener("resize", () => {
-        console.log(image.value.clientHeight);
         imgH.value = image.value.clientHeight;
+    })
+
+
+    watchEffect(() => {
+        if (isVisible.value) {
+            anime({
+                targets: project.value,
+                opacity: 1,
+                top: 0,
+                duration: 800,
+                delay: 200,
+                easing : 'easeOutCubic'
+            })
+        }
     })
 })
 
 </script>
 
 <template>
-    <div class="grid-template-area">
+    <div ref="project" class="opacity-0 relative top-14 grid-template-area">
 
         <img ref="image" :src="`/_nuxt/public/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
         <div :style="{
             'max-height': `${imgH}px`
-        }" class="img overflow-hidden bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer"
-            @click="goToSite">
+        }" class="img overflow-hidden bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer" @click="goToSite">
         </div>
         <!-- 
             

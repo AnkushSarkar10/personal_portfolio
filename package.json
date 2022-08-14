@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "animejs": "^3.2.1",
     "daisyui": "^2.20.0",
     "vue-svg-inline-loader": "^2.1.5"
   }

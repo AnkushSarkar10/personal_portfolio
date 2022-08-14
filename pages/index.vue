@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+
 // navbar styling logic stuff
 type nav = "home" | "about" | "work" | "contact";
 const curNav = ref<nav>("home");
@@ -15,7 +16,7 @@ const changeNav = (navName: nav) => {
     curNav.value = navName;
 }
 
-onMounted(() => {
+onBeforeMount(() => {
     window.scrollTo(0, 0);
 })
 
@@ -26,10 +27,10 @@ onMounted(() => {
         <nav-bar :curNav="curNav"></nav-bar>
         <theme-togle></theme-togle>
         <!-- pages -->
-        <landing-page @change-nav="changeNav" ref="home" id="home"></landing-page>
+        <landing-page @change-nav="changeNav" ref="home" id="home" />
         <about-page @change-nav="changeNav" id="about" />
-        <work-page @change-nav="changeNav" ref="work" id="work"></work-page>
-        <contact-page @change-nav="changeNav" ref="contact" id="contact"></contact-page>
+        <work-page @change-nav="changeNav" ref="work" id="work" />
+        <contact-page @change-nav="changeNav" ref="contact" id="contact" />
 
         <TheFooter />
     </div>

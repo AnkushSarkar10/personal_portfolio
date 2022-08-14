@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import anime from 'animejs/lib/anime.es.js';
+
 const fileName: string = 'tictactoe';
 const projectName: string = 'Multiplayer Tic Tac Toe';
 const githubLink: string = 'https://github.com/AnkushSarkar10/vue-flask-tic-tac-toe';
@@ -7,19 +9,33 @@ const goToSite = () => {
     window.open(siteLink, '_blank');
 }
 const image = ref(null);
+const project = ref(null);
+const isVisible = useElementVisibility(project);
 const imgH = ref(0);
 
 onMounted(() => {
     imgH.value = image.value.clientHeight;
     window.addEventListener("resize", () => {
-        console.log(image.value.clientHeight);
         imgH.value = image.value.clientHeight;
+    })
+
+    watchEffect(() => {
+        if (isVisible.value) {
+            anime({
+                targets: project.value,
+                opacity: 1,
+                top: 0,
+                duration: 800,
+                delay: 200,
+                easing : 'easeOutCubic'
+            })
+        }
     })
 })
 </script>
 
 <template>
-    <div class="grid-template-area">
+    <div ref="project" class="opacity-0 relative top-14 grid-template-area">
 
         <div class="description place-self-center text-start z-10">
             <h1 id="title" class="text-base md:text-2xl font-semibold tracking-tight font-Source mb-10 ml-5">{{
