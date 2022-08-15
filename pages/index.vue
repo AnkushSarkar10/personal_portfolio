@@ -5,7 +5,7 @@ type nav = "home" | "about" | "work" | "contact";
 const curNav = ref<nav>("home");
 
 useHead({
-    title: "hello",
+    title: "Ankush Sarkar",
     meta: [{
         name: 'viewport',
         content: "height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
