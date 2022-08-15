@@ -17,7 +17,7 @@ const changeNav = (navName: nav) => {
 }
 
 onBeforeMount(() => {
-    window.scrollTo(0, 0);
+    history.scrollRestoration = 'manual';
 })
 
 </script>
