@@ -15,9 +15,11 @@ const imgH = ref(315);
 
 
 onMounted(() => {
-    console.log(imgH.value);
-    imgH.value = image.value.clientHeight;
-    console.log(imgH.value);
+    setTimeout(() => {
+        console.log(imgH.value);
+        imgH.value = image.value.clientHeight;
+        console.log(imgH.value);
+    }, 1);
 
     window.addEventListener("resize", () => {
         imgH.value = image.value.clientHeight;
@@ -32,7 +34,7 @@ onMounted(() => {
                 top: 0,
                 duration: 800,
                 delay: 400,
-                easing : 'easeOutCubic'
+                easing: 'easeOutCubic'
             })
         }
     })
@@ -67,11 +69,12 @@ onMounted(() => {
             </div>
 
         </div>
-    <!-- h-[${image.clientHeight}px] -->
+        <!-- h-[${image.clientHeight}px] -->
         <img ref="image" :src="`/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
         <div :style="{
             'max-height': `${imgH}px`
-        }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700" @click="goToSite"></div>
+        }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700"
+            @click="goToSite"></div>
 
     </div>
 </template>
