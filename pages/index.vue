@@ -5,7 +5,8 @@ type nav = "home" | "about" | "work" | "contact";
 const curNav = ref<nav>("home");
 
 useHead({
-    title: "Ankush Sarkar",
+    title: "Ankush",
+    link: [{ rel: 'icon', type: 'image/svg+xml', href: '/svg/A.svg' }],
     meta: [{
         name: 'viewport',
         content: "height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
