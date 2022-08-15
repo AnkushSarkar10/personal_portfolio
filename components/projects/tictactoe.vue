@@ -13,8 +13,10 @@ const project = ref(null);
 const isVisible = useElementVisibility(project);
 const imgH = ref(0);
 
+
 onMounted(() => {
     imgH.value = image.value.clientHeight;
+    console.log(imgH.value);
     window.addEventListener("resize", () => {
         imgH.value = image.value.clientHeight;
     })
@@ -62,11 +64,11 @@ onMounted(() => {
             </div>
 
         </div>
-
+    <!-- h-[${image.clientHeight}px] -->
         <img ref="image" :src="`/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
         <div :style="{
             'max-height': `${imgH}px`
-        }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700" @click="goToSite"></div>
+        }" class="img z-50 bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700" @click="goToSite"></div>
 
     </div>
 </template>
