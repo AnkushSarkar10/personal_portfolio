@@ -16,6 +16,6 @@ export default defineNuxtConfig({
     "vue-svg-inline-loader/nuxt",
     "@vueuse/nuxt",
   ],
-  target: "static",
+  target: "server",
   ssr: true
 });
