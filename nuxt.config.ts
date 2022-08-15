@@ -17,4 +17,5 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
   ],
   target: "static",
+  ssr: true
 });
