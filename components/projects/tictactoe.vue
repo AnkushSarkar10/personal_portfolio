@@ -15,7 +15,6 @@ const imgH = ref(315);
 
 
 onMounted(() => {
-    console.log(process.server);
     console.log(imgH.value);
     imgH.value = image.value.clientHeight;
     console.log(imgH.value);
