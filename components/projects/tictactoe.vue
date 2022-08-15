@@ -63,7 +63,7 @@ onMounted(() => {
 
         </div>
 
-        <img ref="image" :src="`/_nuxt/public/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
+        <img ref="image" :src="`/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
         <div :style="{
             'max-height': `${imgH}px`
         }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700" @click="goToSite"></div>
