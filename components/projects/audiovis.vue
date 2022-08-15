@@ -15,24 +15,26 @@ const isVisible = useElementVisibility(project);
 const imgH = ref(0);
 
 onMounted(() => {
-    imgH.value = image.value.clientHeight;
-    window.addEventListener("resize", () => {
+    setTimeout(() => {
         imgH.value = image.value.clientHeight;
-    })
+        window.addEventListener("resize", () => {
+            imgH.value = image.value.clientHeight;
+        })
 
 
-    watchEffect(() => {
-        if (isVisible.value) {
-            anime({
-                targets: project.value,
-                opacity: 1,
-                top: 0,
-                duration: 800,
-                delay: 400,
-                easing : 'easeOutCubic'
-            })
-        }
-    })
+        watchEffect(() => {
+            if (isVisible.value) {
+                anime({
+                    targets: project.value,
+                    opacity: 1,
+                    top: 0,
+                    duration: 800,
+                    delay: 400,
+                    easing: 'easeOutCubic'
+                })
+            }
+        })
+    }, 50);
 })
 
 </script>
@@ -43,7 +45,8 @@ onMounted(() => {
         <img ref="image" :src="`/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
         <div :style="{
             'max-height': `${imgH}px`
-        }" class="img overflow-hidden bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700" @click="goToSite">
+        }" class="img overflow-hidden bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-opacity duration-700"
+            @click="goToSite">
         </div>
         <!-- 
             

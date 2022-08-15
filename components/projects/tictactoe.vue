@@ -19,25 +19,26 @@ onMounted(() => {
         console.log(imgH.value);
         imgH.value = image.value.clientHeight;
         console.log(imgH.value);
-    }, 1);
 
-    window.addEventListener("resize", () => {
-        imgH.value = image.value.clientHeight;
-        console.log(imgH.value);
-    })
 
-    watchEffect(() => {
-        if (isVisible.value) {
-            anime({
-                targets: project.value,
-                opacity: 1,
-                top: 0,
-                duration: 800,
-                delay: 400,
-                easing: 'easeOutCubic'
-            })
-        }
-    })
+        window.addEventListener("resize", () => {
+            imgH.value = image.value.clientHeight;
+            console.log(imgH.value);
+        })
+
+        watchEffect(() => {
+            if (isVisible.value) {
+                anime({
+                    targets: project.value,
+                    opacity: 1,
+                    top: 0,
+                    duration: 800,
+                    delay: 400,
+                    easing: 'easeOutCubic'
+                })
+            }
+        })
+    }, 50);
 })
 </script>
 
@@ -73,7 +74,7 @@ onMounted(() => {
         <img ref="image" :src="`/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
         <div :style="{
             'max-height': `${imgH}px`
-        }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700"
+        }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-opacity duration-700"
             @click="goToSite"></div>
 
     </div>
