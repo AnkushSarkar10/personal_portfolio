@@ -11,15 +11,17 @@ const goToSite = () => {
 const image = ref(null);
 const project = ref(null);
 const isVisible = useElementVisibility(project);
-const imgH = ref(0);
+const imgH = ref(315);
 
 
 onMounted(() => {
+    console.log(imgH.value);
     imgH.value = image.value.clientHeight;
     console.log(imgH.value);
-    console.log(image.value.clientHeight);
+
     window.addEventListener("resize", () => {
         imgH.value = image.value.clientHeight;
+        console.log(imgH.value);
     })
 
     watchEffect(() => {
@@ -69,7 +71,7 @@ onMounted(() => {
         <img ref="image" :src="`/img/${fileName}.png`" alt="" class="img object-cover object-left-bottom">
         <div :style="{
             'max-height': `${imgH}px`
-        }" class="img z-50 bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700" @click="goToSite"></div>
+        }" class="img bg-secondary opacity-30 hover:opacity-0 hover:cursor-pointer transition-all duration-700" @click="goToSite"></div>
 
     </div>
 </template>
