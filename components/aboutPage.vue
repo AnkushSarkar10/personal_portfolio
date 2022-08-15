@@ -50,7 +50,7 @@ onMounted(() => {
                 targets: iconCont.value.childNodes,
                 opacity: 1,
                 left: 0,
-                delay: anime.stagger(70, { start: 10, from: 'last' })
+                delay: anime.stagger(70, { start: 500, from: 'last' })
             });
         }
     })

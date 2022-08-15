@@ -21,12 +21,13 @@ onMounted(() => {
         targets: titles.value.childNodes,
         opacity: 1,
         top: 0,
-        delay: anime.stagger(170, {start : 0})
+        delay: anime.stagger(200, { start: 0 })
     });
     anime({
         targets: contactButton.value,
         opacity: 1,
-        duration: 700,
+        delay: 600,
+        duration: 900
     });
     anime({
         targets: icons.value.childNodes,
@@ -50,13 +51,14 @@ const gotoContact = () => {
         <div class="flex flex-col space-y-4 pt-[27vh] md:pt-[26vh] min-h-screen ml-14 md:ml-24 lg:ml-40 lg:mr-16 pl-5">
             <h1 ref="page" class="absolute top-14 text-base-100 text-xs select-none">.</h1>
             <div ref="titles" class="">
-                <h1 class="opacity-0 relative top-10 text-base md:text-lg lg:text-xl font-light font-Source">Hi, my name
+                <h1 class="opacity-0 relative top-10 text-base md:text-lg lg:text-xl font-normal font-Source">Hi, my
+                    name
                     is
                 </h1>
                 <h1
                     class="opacity-0 relative top-10 mt-1 md:mt-2 text-secondary font-bold text-3xl md:text-5xl lg:text-6xl">
                     Ankush
-                    Sarkar.</h1>
+                    Sarkar</h1>
                 <h1
                     class="opacity-0 relative top-10 mt-1 md:mt-2 text-xl md:text-2xl lg:text-3xl font-normal font-Source">
                     I am an
@@ -75,16 +77,20 @@ const gotoContact = () => {
         <!-- right side icons -->
         <div ref="icons"
             class="invisible md:visible absolute top-[15rem] right-28 flex flex-col text-lg md:text-xl lg:text-3xl space-y-12">
-            <a class="opacity-0" href="https://github.com/AnkushSarkar10" target="_blank">
+            <a class="opacity-0 hover:text-primary hover:scale-110 transition-all duration-150"
+                href="https://github.com/AnkushSarkar10" target="_blank">
                 <font-awesome-icon icon="fa-brands fa-github" />
             </a>
-            <a class="opacity-0" href="https://www.linkedin.com/in/ankush-sarkar-a55a5b213/" target="_blank">
+            <a class="opacity-0 hover:text-primary hover:scale-110 transition-all duration-150"
+                href="https://www.linkedin.com/in/ankush-sarkar-a55a5b213/" target="_blank">
                 <font-awesome-icon icon="fa-brands fa-linkedin-in" />
             </a>
-            <a class="opacity-0" href="https://twitter.com/Ankush_Sarkar_" target="_blank">
+            <a class="opacity-0 hover:text-primary hover:scale-110 transition-all duration-150"
+                href="https://twitter.com/Ankush_Sarkar_" target="_blank">
                 <font-awesome-icon icon="fa-brands fa-twitter" />
             </a>
-            <a class="opacity-0" href="https://www.instagram.com/_blaze_kush_/" target="_blank">
+            <a class="opacity-0 hover:text-primary hover:scale-110 transition-all duration-150"
+                href="https://www.instagram.com/_blaze_kush_/" target="_blank">
                 <font-awesome-icon icon="fa-brands fa-instagram" />
             </a>
         </div>

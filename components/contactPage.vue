@@ -34,7 +34,6 @@ onMounted(() => {
                 targets: container.value.childNodes,
                 opacity: 1,
                 top: 0,
-                duration: 1500,
                 delay: anime.stagger(100, { start: 400 })
             });
         }
@@ -65,7 +64,7 @@ const openEmail = () => {
             <h1 class="opacity-0 relative top-10 lg:mt-2 text-base md:text-lg lg:text-xl font-extralight font-Source">
                 phone - +1 905-921-5769</h1>
             <button @click="openEmail"
-                class="opacity-0 relative top-10 mt-6 lg:mt-10 border-b-2 border-primary-focus py-1 pr-2 pl-3 text-sm md:text-base lg:text-xl hover:bg-primary hover:border-transparent hover:text-base-100 hover:rounded-sm transition-all duration-150 ease-in-out font-bold tracking-widest">Say
+                class="opacity-0 mt-6 md:mt-8 lg:mt-10 border-b-2 border-primary-focus pb-1 pt-2 pr-2 pl-3 text-sm md:text-base lg:text-xl hover:bg-primary hover:border-transparent hover:text-base-100 hover:rounded-sm transition-all duration-200 ease-in-out font-bold tracking-widest">Say
                 Hello 👋</button>
         </div>
 
