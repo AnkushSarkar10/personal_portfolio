@@ -13,25 +13,23 @@ const isVisible = useElementVisibility(project);
 const imgH = ref(0);
 
 onMounted(() => {
-    setTimeout(() => {
+    imgH.value = image.value.clientHeight;
+    window.addEventListener("resize", () => {
         imgH.value = image.value.clientHeight;
-        window.addEventListener("resize", () => {
-            imgH.value = image.value.clientHeight;
-        })
+    })
 
-        watchEffect(() => {
-            if (isVisible.value) {
-                anime({
-                    targets: project.value,
-                    opacity: 1,
-                    top: 0,
-                    duration: 800,
-                    delay: 400,
-                    easing: 'easeOutCubic'
-                })
-            }
-        })
-    }, 200);
+    watchEffect(() => {
+        if (isVisible.value) {
+            anime({
+                targets: project.value,
+                opacity: 1,
+                top: 0,
+                duration: 800,
+                delay: 400,
+                easing: 'easeOutCubic'
+            })
+        }
+    })
 })
 </script>
 

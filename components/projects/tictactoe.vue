@@ -15,30 +15,25 @@ const imgH = ref(0);
 
 
 onMounted(() => {
-    setTimeout(() => {
-        console.log(imgH.value);
+    imgH.value = image.value.clientHeight;
+
+
+    window.addEventListener("resize", () => {
         imgH.value = image.value.clientHeight;
-        console.log(imgH.value);
+    })
 
-
-        window.addEventListener("resize", () => {
-            imgH.value = image.value.clientHeight;
-            console.log(imgH.value);
-        })
-
-        watchEffect(() => {
-            if (isVisible.value) {
-                anime({
-                    targets: project.value,
-                    opacity: 1,
-                    top: 0,
-                    duration: 800,
-                    delay: 400,
-                    easing: 'easeOutCubic'
-                })
-            }
-        })
-    }, 200);
+    watchEffect(() => {
+        if (isVisible.value) {
+            anime({
+                targets: project.value,
+                opacity: 1,
+                top: 0,
+                duration: 800,
+                delay: 400,
+                easing: 'easeOutCubic'
+            })
+        }
+    })
 })
 </script>
 
