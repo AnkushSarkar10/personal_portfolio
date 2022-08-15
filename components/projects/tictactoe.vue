@@ -11,7 +11,7 @@ const goToSite = () => {
 const image = ref(null);
 const project = ref(null);
 const isVisible = useElementVisibility(project);
-const imgH = ref(315);
+const imgH = ref(0);
 
 
 onMounted(() => {
@@ -38,7 +38,7 @@ onMounted(() => {
                 })
             }
         })
-    }, 100);
+    }, 200);
 })
 </script>
 
