@@ -17,6 +17,7 @@ const imgH = ref(0);
 onMounted(() => {
     imgH.value = image.value.clientHeight;
     console.log(imgH.value);
+    console.log(image.value.clientHeight);
     window.addEventListener("resize", () => {
         imgH.value = image.value.clientHeight;
     })
