@@ -15,7 +15,7 @@ const isVisible = useElementVisibility(project);
 const imgH = ref(0);
 
 onMounted(() => {
-    setTimeout(() => {
+    // setTimeout(() => {
         imgH.value = image.value.clientHeight;
         window.addEventListener("resize", () => {
             imgH.value = image.value.clientHeight;
@@ -34,7 +34,7 @@ onMounted(() => {
                 })
             }
         })
-    }, 200);
+    // }, 200);
 })
 
 </script>
