@@ -69,9 +69,9 @@ const gotoContact = () => {
             </div>
 
             <button ref="contactButton" @click="gotoContact"
-                class="opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-accent self-start relative top-24">Contact
+                class="flex opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-accent self-start relative top-24">Contact
                 Me
-                <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4" />
+                <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4 text-base" />
             </button>
         </div>
         <!-- right side icons -->
