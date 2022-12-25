@@ -56,14 +56,12 @@ const gotoContact = () => {
                     is
                 </h1>
                 <h1
-                    class="opacity-0 relative top-10 mt-1 md:mt-2 text-secondary font-bold text-3xl md:text-5xl lg:text-6xl">
+                    class="opacity-0 relative top-10 mt-1 md:mt-3 text-secondary font-bold text-3xl md:text-5xl lg:text-6xl">
                     Ankush
                     Sarkar</h1>
                 <h1
-                    class="opacity-0 relative top-10 mt-1 md:mt-2 text-xl md:text-2xl lg:text-3xl font-normal font-Source">
-                    I am an
-                    aspiring
-                    web developer.
+                    class="opacity-0 relative top-10 mt-1 md:mt-3 text-xl md:text-2xl lg:text-3xl font-normal font-Source">
+                    Full Stack Software Developer.
 
                 </h1>
             </div>
