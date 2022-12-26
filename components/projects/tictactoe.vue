@@ -53,7 +53,7 @@ onMounted(() => {
                 hosted
                 on <a href="https://firebase.google.com/" target="_blank"
                     class="text-primary underline hover:text-primary-focus">firebase</a>, and the flask backend is
-                hosted on <a href="https://www.heroku.com/free" target="_blank"
+                hosted on <a href="https://render.com/" target="_blank"
                     class="text-primary underline hover:text-primary-focus">Render</a>.</h1>
             <div class="flex justify-start space-x-6 text-lg md:text-2xl mt-5 ml-4">
                 <a :href="githubLink" target="_blank">
