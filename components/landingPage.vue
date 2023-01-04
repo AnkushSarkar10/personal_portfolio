@@ -87,7 +87,7 @@ const downloadResume = () => {
                 </h1>
             </div>
 
-            <div class="flex md:gap-x-10 gap-x-3">
+            <div class="flex md:gap-x-10 gap-x-2">
                 <button ref="contactButton" @click="gotoContact"
                     class="opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-accent self-start relative top-24">Contact
                     Me
