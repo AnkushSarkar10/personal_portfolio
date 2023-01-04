@@ -4,6 +4,7 @@ import anime from 'animejs/lib/anime.es.js';
 const page = ref(null);
 const titles = ref(null);
 const contactButton = ref(null);
+const resumeDownloadButton = ref(null);
 const icons = ref(null);
 
 const isVisible = useElementVisibility(page);
@@ -30,6 +31,12 @@ onMounted(() => {
         duration: 900
     });
     anime({
+        targets: resumeDownloadButton.value,
+        opacity: 1,
+        delay: 600,
+        duration: 900
+    });
+    anime({
         targets: icons.value.childNodes,
         opacity: 1,
         delay: anime.stagger(50, { direction: 'reverse' }),
@@ -42,6 +49,20 @@ onMounted(() => {
 const gotoContact = () => {
     const element = document.getElementById('contact');
     element.scrollIntoView({ behavior: "smooth" });
+}
+
+const downloadResume = () => {
+    console.log("resume");
+    const fs = require("fs");
+    const request = require("request-promise-native");
+
+    async function downloadPDF(pdfURL: string, outputFilename: string) {
+        let pdfBuffer = await request.get({ uri: pdfURL, encoding: null });
+        console.log("Writing downloaded PDF file to " + outputFilename + "...");
+        fs.writeFileSync(outputFilename, pdfBuffer);
+    }
+
+    downloadPDF("https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/ecf_faq.pdf", "c:/temp/somePDF.pdf");
 }
 
 </script>
@@ -66,11 +87,20 @@ const gotoContact = () => {
                 </h1>
             </div>
 
-            <button ref="contactButton" @click="gotoContact"
-                class="flex opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-accent self-start relative top-24">Contact
-                Me
-                <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4 text-base" />
-            </button>
+            <div class="flex md:gap-x-10 gap-x-3">
+                <button ref="contactButton" @click="gotoContact"
+                    class="opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-accent self-start relative top-24">Contact
+                    Me
+                    <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4 text-base" />
+                </button>
+
+                <a download href="https://github.com/AnkushSarkar10/Resume/raw/master/resume.pdf" ref="resumeDownloadButton" @click="downloadResume"
+                    class="opacity-0 font-Source tracking-widest btn btn-outline btn-secondary btn-md lg:btn-lg hover:btn-active self-start relative top-24">
+                    Resume
+                    <font-awesome-icon icon="fa-solid fa-download" class="ml-4 text-base" />
+                </a>
+            </div>
+
         </div>
         <!-- right side icons -->
         <div ref="icons"
