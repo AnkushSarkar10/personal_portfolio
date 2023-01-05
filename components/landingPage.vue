@@ -69,7 +69,7 @@ const downloadResume = () => {
 
 <template>
     <div>
-        <div class="flex flex-col space-y-4 pt-[27vh] md:pt-[26vh] min-h-screen ml-14 md:ml-24 lg:ml-40 lg:mr-16 pl-5">
+        <div class="flex flex-col space-y-4 pt-[27vh] md:pt-[26vh] min-h-screen ml-12 md:ml-24 lg:ml-40 lg:mr-16 pl-5">
             <h1 ref="page" class="absolute top-14 text-base-100 text-xs select-none">.</h1>
             <div ref="titles" class="">
                 <h1 class="opacity-0 relative top-10 text-base md:text-lg lg:text-xl font-normal font-Source">Hi, my
@@ -87,17 +87,17 @@ const downloadResume = () => {
                 </h1>
             </div>
 
-            <div class="flex md:gap-x-10 gap-x-2">
+            <div class="flex md:gap-x-10 gap-x-3">
                 <button ref="contactButton" @click="gotoContact"
                     class="opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-accent self-start relative top-24">Contact
                     Me
-                    <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-4 text-base" />
+                    <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-2 md:ml-4 text-base" />
                 </button>
 
                 <a download href="https://github.com/AnkushSarkar10/Resume/raw/master/resume.pdf" ref="resumeDownloadButton" @click="downloadResume"
                     class="opacity-0 font-Source tracking-widest btn btn-outline btn-secondary btn-md lg:btn-lg hover:btn-active self-start relative top-24">
                     Resume
-                    <font-awesome-icon icon="fa-solid fa-download" class="ml-4 text-base" />
+                    <font-awesome-icon icon="fa-solid fa-download" class="ml-1 md:ml-4 text-base" />
                 </a>
             </div>
 
