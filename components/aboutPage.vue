@@ -71,7 +71,7 @@ onMounted(() => {
 
         <div class="flex flex-col items-center md:flex-row mt-6 md:mt-16">
             <div ref="container" class="md:w-1/2 pr-10 md:pr-14 text-center items-center flex flex-col">
-                <img ref="img" :src="`/img/rizz.png`" alt="img"
+                <img ref="img" :src="`/img/rizz2.png`" alt="img"
                     class="opacity-0 relative top-14 object-cover object-top mb-7 h-[15rem] w-[15rem] md:h-[17rem] md:w-[17rem] rounded-full border-[2px] md:border-[4px] border-primary-focus shadow-sm">
                 <div
                     class="opacity-0 relative top-14 text-xl md:text-xl lg:text-2xl font-Source md:tracking-wide font-bold mb-7 ">
