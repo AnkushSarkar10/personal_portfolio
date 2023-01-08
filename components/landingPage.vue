@@ -89,13 +89,13 @@ const downloadResume = () => {
 
             <div class="flex md:gap-x-10 gap-x-3">
                 <button ref="contactButton" @click="gotoContact"
-                    class="opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-accent self-start relative top-24">Contact
+                    class="opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-active self-start relative top-24">Contact
                     Me
                     <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-2 md:ml-4 text-base" />
                 </button>
 
                 <a download href="https://github.com/AnkushSarkar10/Resume/raw/master/resume.pdf" ref="resumeDownloadButton" @click="downloadResume"
-                    class="opacity-0 font-Source tracking-widest btn btn-outline btn-secondary btn-md lg:btn-lg hover:btn-active self-start relative top-24">
+                    class="opacity-0 font-Source tracking-widest btn btn-secondary btn-md lg:btn-lg hover:btn-active self-start relative top-24">
                     Resume
                     <font-awesome-icon icon="fa-solid fa-download" class="ml-1 md:ml-4 text-base" />
                 </a>
