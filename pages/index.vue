@@ -27,7 +27,7 @@ onBeforeMount(() => {
     <div class="text-base-content scroll-smooth">
         <nav-bar :curNav="curNav"></nav-bar>
         <theme-togle></theme-togle>
-        <!-- pages -->
+        <!-- sections -->
         <landing-page @change-nav="changeNav" ref="home" id="home" />
         <about-page @change-nav="changeNav" id="about" />
         <work-page @change-nav="changeNav" ref="work" id="work" />

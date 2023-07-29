@@ -46,6 +46,7 @@ onMounted(() => {
             class="w-[7.2rem] md:w-[11rem] lg:w-[14rem] left-[1.3rem] md:left-[1.8rem] lg:left-[2.7rem] h-[0.3rem] md:h-[0.6rem] lg:h-4 bg-secondary relative bottom-[0.6rem] md:bottom-[0.8rem] lg:bottom-4 opacity-80 -z-50" />
 
         <div class="flex flex-col mt-10 md:mt-20 space-y-14 md:space-y-32 md:mx-12 lg:mx-32 mb-[5vh] md:mb-[8vh]">
+            <projects-famtree/>
             <projects-audiovis />
             <projects-tictactoe />
             <projects-sorting />

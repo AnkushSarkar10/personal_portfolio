@@ -78,13 +78,13 @@ onMounted(() => {
                     Who is
                     this
                     guy?</div>
-                <div class="opacity-0 relative top-14 text-sm md:text-base lg:text-xl font-light">
-                    Hi, I am Ankush Sarkar. I am currently second-year undergraduate student studying Computer Science
+                <div class="opacity-0 relative top-14 text-sm md:text-base lg:text-lg font-light">
+                    Hi, I am Ankush Sarkar. I am studying Computer Science
                     at Mcmaster University. I can build full-stack
                     web
-                    applications. To the right are some technologies I have used. I like vue js and all things
-                    web
-                    development. Building things and bringing ideas to life is what drives me.
+                    applications. To the right are some technologies I have used. I enjoy delving into all aspects of web
+                    development. Transforming ideas into reality and building innovative solutions is what fuels my
+                    enthusiasm.
                     <div> Trying to learn new things
                         everyday!</div>
                 </div>
@@ -92,23 +92,22 @@ onMounted(() => {
             </div>
             <div ref="iconCont"
                 class="md:w-1/2 md:pl-5 pr-10 mt-10 md:mt-0 flex flex-row flex-wrap items-center justify-center">
-                <tech-icons class="opacity-0 relative left-16" :filename="'typescript'"></tech-icons>
                 <tech-icons class="opacity-0 relative left-16" :filename="'vue'"></tech-icons>
                 <tech-icons class="opacity-0 relative left-16" :filename="'nuxt'"></tech-icons>
+                <tech-icons class="opacity-0 relative left-16" :filename="'typescript'"></tech-icons>
 
+                <tech-icons class="opacity-0 relative left-16" :filename="'react'"></tech-icons>
+                <tech-icons class="opacity-0 relative left-16" :filename="'nextjs'"></tech-icons>
                 <tech-icons class="opacity-0 relative left-16" :filename="'tailwind'"></tech-icons>
-                <tech-icons class="opacity-0 relative left-16" :filename="'css'"></tech-icons>
-                <tech-icons class="opacity-0 relative left-16" :filename="'html'"></tech-icons>
 
                 <tech-icons class="opacity-0 relative left-16" :filename="'python'"></tech-icons>
                 <tech-icons class="opacity-0 relative left-16" :filename="'flask'"></tech-icons>
                 <tech-icons class="opacity-0 relative left-16" :filename="'threejs'"></tech-icons>
 
-                <tech-icons class="opacity-0 relative left-16" :filename="'git'"></tech-icons>
+                <tech-icons class="opacity-0 relative left-16" :filename="'sql'"></tech-icons>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
