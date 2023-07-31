@@ -3,7 +3,7 @@ import anime from 'animejs/lib/anime.es.js';
 
 const page = ref(null);
 const titles = ref(null);
-const contactButton = ref(null);
+const blogButton = ref(null);
 const resumeDownloadButton = ref(null);
 const icons = ref(null);
 
@@ -25,7 +25,7 @@ onMounted(() => {
         delay: anime.stagger(200, { start: 0 })
     });
     anime({
-        targets: contactButton.value,
+        targets: blogButton.value,
         opacity: 1,
         delay: 600,
         duration: 900
@@ -50,6 +50,11 @@ const gotoContact = () => {
     const element = document.getElementById('contact');
     element.scrollIntoView({ behavior: "smooth" });
 }
+
+// const gotoBlog = () => {
+//     const
+// }
+
 
 const downloadResume = () => {
     console.log("resume");
@@ -80,21 +85,22 @@ const downloadResume = () => {
                     class="opacity-0 relative top-10 mt-1 md:mt-3 text-secondary font-bold text-3xl md:text-5xl lg:text-6xl">
                     Ankush
                     Sarkar</h1>
-                <h1
-                    class="opacity-0 relative top-10 mt-1 md:mt-3 text-xl md:text-2xl lg:text-3xl font-normal font-Source">
+                <h1 class="opacity-0 relative top-10 mt-1 md:mt-3 text-xl md:text-2xl lg:text-3xl font-normal font-Source">
                     Full Stack Software Developer.
 
                 </h1>
             </div>
 
             <div class="flex md:gap-x-10 gap-x-3">
-                <button ref="contactButton" @click="gotoContact"
-                    class="opacity-0 font-Source tracking-widest btn btn-outline btn-primary btn-md lg:btn-lg hover:btn-active self-start relative top-24">Contact
-                    Me
-                    <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-2 md:ml-4 text-base" />
-                </button>
+                <a ref="blogButton" href="https://blog.ankushsarkar.dev/" target="_blank"
+                    class="opacity-0 font-Source tracking-widest btn btn-outline btn-md lg:btn-lg hover:btn-active hover:text-white self-start relative top-24">
+                    My Blog
+                    <!-- <font-awesome-icon icon="fa-solid fa-arrow-down-long" class="ml-2 md:ml-4 text-base" /> -->
+                    <font-awesome-icon icon="fa-brands fa-hashnode" class="ml-2 md:ml-4 text-base" />
+                </a>
 
-                <a download href="https://github.com/AnkushSarkar10/Resume/raw/master/resume.pdf" ref="resumeDownloadButton" @click="downloadResume"
+                <a download href="https://github.com/AnkushSarkar10/Resume/raw/master/resume.pdf" ref="resumeDownloadButton"
+                    @click="downloadResume"
                     class="opacity-0 font-Source tracking-widest btn btn-secondary btn-md lg:btn-lg hover:btn-active self-start relative top-24">
                     Resume
                     <font-awesome-icon icon="fa-solid fa-download" class="ml-1 md:ml-4 text-base" />
@@ -123,7 +129,6 @@ const downloadResume = () => {
             </a>
         </div>
     </div>
-
 </template>
 
 <style scoped>
