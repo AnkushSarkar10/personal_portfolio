@@ -51,24 +51,21 @@ const gotoContact = () => {
     element.scrollIntoView({ behavior: "smooth" });
 }
 
-// const gotoBlog = () => {
-//     const
+
+
+// const downloadResume = () => {
+//     console.log("resume");
+//     const fs = require("fs");
+//     const request = require("request-promise-native");
+
+//     async function downloadPDF(pdfURL: string, outputFilename: string) {
+//         let pdfBuffer = await request.get({ uri: pdfURL, encoding: null });
+//         console.log("Writing downloaded PDF file to " + outputFilename + "...");
+//         fs.writeFileSync(outputFilename, pdfBuffer);
+//     }
+
+//     downloadPDF("https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/ecf_faq.pdf", "c:/temp/somePDF.pdf");
 // }
-
-
-const downloadResume = () => {
-    console.log("resume");
-    const fs = require("fs");
-    const request = require("request-promise-native");
-
-    async function downloadPDF(pdfURL: string, outputFilename: string) {
-        let pdfBuffer = await request.get({ uri: pdfURL, encoding: null });
-        console.log("Writing downloaded PDF file to " + outputFilename + "...");
-        fs.writeFileSync(outputFilename, pdfBuffer);
-    }
-
-    downloadPDF("https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/ecf_faq.pdf", "c:/temp/somePDF.pdf");
-}
 
 </script>
 
@@ -99,8 +96,7 @@ const downloadResume = () => {
                     <font-awesome-icon icon="fa-brands fa-hashnode" class="ml-2 md:ml-4 text-base" />
                 </a>
 
-                <a download href="https://github.com/AnkushSarkar10/Resume/raw/master/resume.pdf" ref="resumeDownloadButton"
-                    @click="downloadResume"
+                <a download href="https://github.com/AnkushSarkar10/Resume/raw/master/resume.pdf" ref="resumeDownloadButton" target="_blank"
                     class="opacity-0 font-Source tracking-widest btn btn-secondary btn-md lg:btn-lg hover:btn-active self-start relative top-24">
                     Resume
                     <font-awesome-icon icon="fa-solid fa-download" class="ml-1 md:ml-4 text-base" />
